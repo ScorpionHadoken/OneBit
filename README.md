@@ -14,7 +14,9 @@ VOID - Declare variable
 
 OP - Operate variable
 ===============================================================================
+
 Regular:
+
 v --------------- Declare variable
 
 0 00 00000000
