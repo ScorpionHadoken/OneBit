@@ -51,7 +51,7 @@ vvvvvvvv                                     Line number
 00000010 1 10 00000001 = Print line 0, which equals 0
 
 
-Math in OneBit:
+# Math in OneBit:
 
 Math is very important to a coding language. So I would like to provide the bare minimum.
 
@@ -60,8 +60,7 @@ OP MATH SUB: Subtracts VOID SET line by 1
 
 Like I said, bare minimum, no 1's and 0's for you. Figure it out.
 
-
-Leaving the user in the dark:
+# Leaving the user in the dark:
 
 OP CHAR PRT (VOID SET Line): Print the value of a VOID SET line, no regular strings, just predetermined variables.
 
