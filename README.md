@@ -32,15 +32,22 @@ you can access it by typing it's line number. Example:
 Human Readable:
 
 v-------------------Line number
+
 0 VOID SET 0 = 0
+
 --------------v-----Line 0
+
 1 OP CHAR PRT 0 = Print line 0, which equals 0
 
 
 ||||||||-----------------------------------------|
+
 vvvvvvvv                                     Line number
+
 00000001 0 00 00000000 = Integer 0
+
 --------------vvvvvvvv-------------------------Line 1
+
 00000010 1 10 00000001 = Print line 0, which equals 0
 
 
