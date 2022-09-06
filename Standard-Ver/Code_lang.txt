@@ -1,0 +1,77 @@
+I suck at 1's and 0's, doing this Abraham Lincoln style
+
+https://www.cs.princeton.edu/courses/archive/fall07/cos109/bc.html
+
+Things to note:
+
+Line 00000000 IS ALWAYS NOTHING, use for no op, see below;
+
+Every void line (see below) can be used as a variable
+
+
+begin line:
+
+0 - VOID/VARIABLE
+
+1 - OPERATE
+
+second space in line:
+
+===============================
+(void) (second space[0])(second space[1])(8-bit Binary)
+===============================
+
+second space[0]: VARIABLE mode if 0, REACH mode if 1
+second space[1] (VARIABLE): Integer if 0, String if 1
+second space[1] (REACH): import local file (1 import at a time) if 0, export (save) line of code if 1 
+
+===============================
+(operate) (second space[0], second space[1])
+===============================
+
+second space[0]: Math mode if 0, Char mode if 1
+second space[1]: (math mode): ADD if 0, SUB if 1
+second space[1]: (Char mode): print if 0, recieve input and overwrite current line if 1
+
+
+Set variable assigned to 1, next line sub by 1:
+
+=====================================
+00000001 0 00 00000001 Set line 1 as a variable of 1
+00000010 1 01 00000001 subtract line 1 - 1
+00000011 1 10 00000001 print out line 1
+=====================================
+
+Output:
+0
+
+Planned file system importing:
+
+===========================================================================================
+
+00000001 00 11111101 this line does not have 0 before the line number unlike line 2
+0 00000010 11 00000001 First created file is 00000000, imports file 2, or 00000010
+0 00000001 01 1 00000001 Calls line 1 in the imported file, subtracts by 1
+
+===========================================================================================
+
+File 00000001:
+
+=====================================================================================================================================================
+
+1 00000001 00 11111111 Importing other files places 1 in front, lines in the original file have 0 placed in front. Anyways this defines line 1 as 255  
+
+=====================================================================================================================================================
+
+Planned file system importing con't:
+
+================================================================================================================================
+
+0 00000001 11 00000001 First created file is 00000000
+
+
+================================================================================================================================
+
+Double line count (idea):
+
+So when importing files you'd 
