@@ -33,6 +33,16 @@ def readC(code): # Oh yeah, the fun part. Wrote this last, am excited.
                 code[line] = x[9:]
                 continue # No need to check for anything if the code is now overwritten
 
+            elif x[5:7] == "EX": # EX for export
+                f = open( x[8:16] + ".1bit","w") # Save to a file ext I made up, limiting to 8 chars because 8 bit, but also I need to define a place for which line to write
+                f.write(x[17:] + "\n") # write code or even just text which dev decides.
+                f.close()
+
+            elif x[5:7] == "IM": # IM for import
+                f = open( x[8:16] + ".1bit","r")
+                pass # for now
+                f.close()
+
         elif x[0:2] == "OP":
 
             if x[3:7] == "MATH":
@@ -54,14 +64,11 @@ def readC(code): # Oh yeah, the fun part. Wrote this last, am excited.
                     continue
 
                 elif x[8:10] == "IN":
-
                     words = x[11:]
                     TakeStuff = input(f"{words}") # Input statement is just weird like that, can't do input(x[12:])
                     code[line] = TakeStuff
                     continue # No more to do with this iteration
         
-                
-        print("")
         line += 1 # Debugging purposes
 
 
@@ -74,6 +81,16 @@ def readCL(code): # Yes I copied readC, and only changed this comment and the if
             if x[5:8] == "set": # Used to do INT and STR but that jacked up OP CHAR PRT, just use the right things!
                 code[line] = x[9:]
                 continue # No need to check for anything if the code is now overwritten
+
+            elif x[5:7] == "ex": # EX for export
+                f = open( x[8:16] + ".1bit","w") # Save to a file ext I made up, limiting to 8 chars because 8 bit, but also I need to define a place for which line to write
+                f.write(x[17:] + "\n") # write code or even just text which dev decides.
+                f.close()
+
+            elif x[5:7] == "im": # IM for import
+                f = open( x[8:16] + ".1bit","r")
+                pass # for now
+                f.close()
 
         elif x[0:2] == "op":
 
@@ -96,14 +113,10 @@ def readCL(code): # Yes I copied readC, and only changed this comment and the if
                     continue
 
                 elif x[8:10] == "in":
-
                     words = x[11:]
                     TakeStuff = input(f"{words}") # Input statement is just weird like that, can't do input(x[12:])
                     code[line] = TakeStuff
                     continue # No more to do with this iteration
-        
-                
-        print("")
         line += 1 # Debugging purposes
 
 
