@@ -74,4 +74,7 @@ Planned file system importing con't:
 
 Double line count (idea):
 
-So when importing files you'd 
+So when importing files you'd use (0 for file running, 1 for imported) 00000001 (code)
+In the english version you can use block to start a new section of code, giving you another 256 lines of code. However, you cannot access another block execpt for executing it
+TL;DR:
+I'm working on functions in OneBit
