@@ -65,3 +65,19 @@ Like I said, bare minimum, no 1's and 0's for you. Figure it out.
 OP CHAR PRT (VOID SET Line): Print the value of a VOID SET line, no regular strings, just predetermined variables.
 
 OP CHAR IN (Text to tell the user): Take input from user, then overwrite the line as a VOID SET line, or in other words, a useable variable. Even in math! 
+
+Expanding on your code:
+
+A new (10/1/2022) feature added to OneBit is the BLOCK (operator?). Blocks are like if you isolated your code from one another for more lines of code.
+
+To access a block, type VOID IM (block number, starting a 0).
+
+To make a new block, type BLOCK. (Case sensitive, case lower does not care, same of EXIT and CLEAR)
+
+# WRITE MODE OPERATORS:
+
+EXIT - proceed to read mode
+
+CLEAR - Even when you re-enter write mode from read mode, you start back at block 0 and are adding onto it. To start over, type CLEAR, which wipes everything
+
+BLOCK - Start a new block, see above section
